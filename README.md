@@ -42,14 +42,16 @@ The scores obtained from the script should obtain `>0.65` Spearman correlation w
 You may cite the paper as
 
 ```
-@inproceedings{
-      poet_neurips2023,
-      title={PoET: A generative model of protein families as sequences-of-sequences},
-      author={Timothy F. Truong Jr and Tristan Bepler},
-      booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-      url={https://openreview.net/forum?id=1CJ8D7P8RZ}
-      volume = {37},
-      year={2023},
+@inproceedings{NEURIPS2023_f4366126,
+ author = {Truong Jr, Timothy and Bepler, Tristan},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {A. Oh and T. Neumann and A. Globerson and K. Saenko and M. Hardt and S. Levine},
+ pages = {77379--77415},
+ publisher = {Curran Associates, Inc.},
+ title = {PoET: A generative model of protein families as sequences-of-sequences},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2023/file/f4366126eba252699b280e8f93c0ab2f-Paper-Conference.pdf},
+ volume = {36},
+ year = {2023}
 }
 ```
 
