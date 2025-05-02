@@ -423,10 +423,8 @@ class MultiheadAttention(nn.Module):
         return_projs: bool = False,
     ) -> Tuple[Union[torch.Tensor, PackedTensorSequences], Optional[torch.Tensor]]:
         # dispatch depending on whether input is Packed or unpacked
-        packed_input = type(query) is PackedTensorSequences
-        fn = self.forward_padded
-        if packed_input:
-            fn = self.forward_packed
+        
+        fn = self.forward_packed
 
         return fn(
             query, key, value, key_padding_mask, attn_mask, return_weights, return_projs
