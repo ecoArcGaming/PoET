@@ -705,7 +705,7 @@ class PoET(nn.Module, LogitsAllocateMemoryMixin):
         self.token_embed = nn.Embedding(n_vocab, hidden_dim)
         # kept just to maintain compatability with old models
         self.rotary_emb = RotaryEmbedding(hidden_dim // nhead)
-
+        
         ff_dim = ff_dim or 4 * hidden_dim
 
         self.decoder = TransformerEncoder(

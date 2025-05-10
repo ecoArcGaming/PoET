@@ -74,8 +74,8 @@ def get_mask(batch_sizes: torch.Tensor) -> torch.Tensor:
     max_len = batch_sizes.max()
     # taken from https://discuss.pytorch.org/t/how-to-generate-variable-length-mask/23397/3
     mask = (
-        torch.arange(max_len, device=batch_sizes.device)[None, :]
-        >= batch_sizes[:, None]
+        torch.arange(max_len, device=batch_sizes.device)[None, :, None]
+        >= batch_sizes[:, None, None]
     )
     return mask
 
@@ -158,8 +158,8 @@ class PackedTensorSequences:
         )
 
     def to_padded(self, return_mask=False, return_positions=False):
-        if not self.to_paddedable:
-            raise ValueError("Cannot be to_padded")
+        # if not self.to_paddedable:
+        #     raise ValueError("Cannot be to_padded")
 
         s = self.max_s
         b = self.batch_size
